@@ -1,0 +1,22 @@
+[INPUT_SETTINGS]
+input_type = csv
+cnxn_string = 
+cursor_execute_string = 
+input_filepath = data\example_input_file.txt
+
+[CODES]
+codes_filepath = data\FY19_ICD10CM_mappings.txt
+groups_filepath = data\FY19_code_groupings.txt
+
+[OUTPUT_SETTINGS]
+results_file = data\fy19_codebased_test_output.txt
+logging_file = data\fy19_codebased_test_log.txt
+
+[SEARCH_OPTIONS]
+column_to_search = CODE
+columns_to_keep = UNIQUE_ID, STATE
+inclusions_1 = ID_SETTING, IP, ED-to-IP, ED
+inclusions_2 = 
+exclusions_1 = MEDICARE, 1
+exclusions_2 = 
+output_zeros = False

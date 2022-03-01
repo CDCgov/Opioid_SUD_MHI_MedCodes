@@ -1,0 +1,8 @@
+2021-12-20 16:12:35,827 : INFO : Your output file has been specified as: fy19_codebased_test_output.txt
+2021-12-20 16:12:35,827 : INFO : Your input type has been specified as CSV
+2021-12-20 16:12:35,830 : INFO : At column ID_SETTING including only values: {'ED-to-IP', 'ED', 'IP'}
+2021-12-20 16:12:35,830 : INFO : At column MEDICARE excluding values: {1.0}
+2021-12-20 16:12:35,838 : INFO : Processing dataframes in chunks of 10000 rows
+2021-12-20 16:12:35,846 : INFO : Processed df 0
+2021-12-20 16:12:35,877 : INFO : Appended additional rows 6
+2021-12-20 16:12:35,877 : INFO : COMPLETE
