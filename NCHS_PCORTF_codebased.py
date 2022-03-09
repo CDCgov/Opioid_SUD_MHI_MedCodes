@@ -39,6 +39,7 @@ def search(arglist):
     #in order to accommodate this, read in everything as a string.
     
     if input_type == "DB":
+        import pyodbc
         logging.info("Connecting to SQL DB...")
         cnxn = pyodbc.connect(cnxn_string)        
         df_iter = pd.read_sql(cursor_execute_string, cnxn, chunksize=chunksize)
@@ -114,7 +115,6 @@ def parse_and_run(configfile):
         
     if config['INPUT_SETTINGS']['input_type'].upper().strip() == "DB":
         input_type="DB"
-        import pyodbc
         if ("cnxn_string" not in config['INPUT_SETTINGS']) or ("cursor_execute_string" not in config["INPUT_SETTINGS"]):
             raise KeyError("You specified input type as DB but did not specify cnxn_string or did not specify cursor_execute_string")
 
