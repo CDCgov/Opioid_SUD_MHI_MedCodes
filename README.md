@@ -2,7 +2,7 @@
 
 March 1, 2022 
 
-Author: Nikki Adams; oxf7@cdc.gov 
+Author: Nikki Adams; NAdams2@cdc.gov 
 
 This is a Python version of the original SAS code used to analyze the 2016 National Hospital Care Survey (NHCS) data for the fiscal year (FY) 2018 and 2019 Office of the Secretary-Patient-Centered Outcomes Research Trust Fund-funded projects on the identification of patients with opioid-involved hospitalizations and emergency department (ED) visits. The National Center for Health Statistics conducts NHCS which involves the collection of a participating hospital’s (UB)-04 administrative claims records or electronic health records (EHR) in a 12-month period. The first algorithm identifies patients with opioid-involved hospitalizations and ED visits (FY18) by utilizing the structured coded medical data and analyzing free text in the EHR clinical notes. The second algorithm then identifies patients with opioid-involved hospitalizations or ED visits that have a co-occurring substance use disorder or a mental health issue (FY19). For a hospital to be eligible for NHCS, the hospital must be a non-federal, non-institutional hospital with 6 or more staffed inpatient beds. This is the release of the medical code-based algorithm, which analyzed the structured data. It specifies which codes map to which variables and how the child/parent variables were built. It searches structured data containing medical codes for opioid-involvement, including opioid overdose, substance use disorders, and selected mental health issues (primarily related to anxiety and depression).
 
