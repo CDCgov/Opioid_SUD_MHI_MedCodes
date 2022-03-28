@@ -34,14 +34,16 @@ At a command line type:
 
     python  NCHS_PCORTF_codebased.py codebased_config.txt 
 
-AAn example input CSV file would contain the information below:
+An example input CSV file would contain the information below. Be aware, all periods in the column specified as the column to search for codes will be automatically stripped to match the formatting of the search codes provided. For example, "T14.91XA" will be stripped of its period to become "T1491XA" before it is searched. This does not change the source file, but if the CODE column below is specified as one of the output columns, the value will be the form without the periods, not its original form:
+
 | UNIQUE_ID | ID_SETTING | STATE | CODE | MEDICARE |
 | ----- | ----- | ----- | ----- | ----- |
-| 123X | ED | ALASKA | T1491XA | 0 |
+| 123X | ED | ALASKA | T14.91XA | 0 |
 | 456X | ED-to-IP | ALASKA | F322 | 1 |
 | 835T | ED | NEW YORK | F15220 | 0 |
 
-An example of the CSV mappings is shown below:
+An example of the CSV mappings is shown below. 
+
 | CODE | CATEGORY |
 | ------ | ------ |
 | F322 | CODE_DEPRESSION_SINGLE |
@@ -63,7 +65,7 @@ Example output is shown below, with configuration options set to exclude MEDICAR
 
 **Package Requirements**
 
-Running this code requires the software below. However, pyodbc is not needed, if the input data is not coming through a SQL database connection, i.e. if it is coming from a SAS dataset or a CSV file: 
+Running this code requires the software below. However, pyodbc is not needed if the input data is not coming through a SQL database connection, i.e. if it is coming from a SAS dataset or a CSV file: 
 
     python >= 3.4 
     pandas >=0.24.1
