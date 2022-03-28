@@ -55,8 +55,8 @@ def search(arglist):
 
     logging.info(f"Processing dataframes in chunks of {chunksize} rows")
     for counter, df in enumerate(df_iter):
-
-
+        if df[column_to_search].dtype=="O":
+            df[column_to_search] = df[column_to_search].str.replace(".", "", regex=False)
         print(f"Processed df {counter}")
         logging.info(f"Processed df {counter}")
         for k, v in inclusions_dict.items():
