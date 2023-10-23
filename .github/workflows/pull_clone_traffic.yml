@@ -1,0 +1,22 @@
+name: Clone Traffic Tracker
+
+on:
+  schedule:
+    - cron: "0 0 * * 1"  # Run every 2 weeks, adjust the schedule as needed
+
+jobs:
+  track-clone-traffic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Fetch Clone Traffic
+        run: |
+          # Use GitHub API to fetch clone statistics
+          # You may need to provide a token with appropriate permissions
+          # Log the results to a file
+          curl -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" -o clone_traffic.json https://api.github.com/repos/${{ github.repository }}/traffic/clones
+          echo "$(date): Clone Traffic Data: $(cat clone_traffic.json)" >> clone_traffic.log
+
+      # You can add steps to store or notify about the data as needed
