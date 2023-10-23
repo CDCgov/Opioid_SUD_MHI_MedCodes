@@ -22,3 +22,11 @@ jobs:
           
       - name: List Files in Workspace
         run: ls -R
+        
+      - name: Commit the results to the repo
+        run: |
+         git config user.name github-actions
+         git config user.email github-actions@github.com
+         git add -f data/logs/clonelogs.log
+         git commit --allow-empty -m "GH Action: Update RDC Excel export"
+         git push
