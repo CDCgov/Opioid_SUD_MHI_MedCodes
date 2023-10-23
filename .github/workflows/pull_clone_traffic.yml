@@ -27,6 +27,6 @@ jobs:
         run: |
          git config user.name github-actions
          git config user.email github-actions@github.com
-         git add -f data/logs/clonelogs.log
+         git add -f data/clone_traffic.log
          git commit --allow-empty -m "add traffic logs"
          git push
