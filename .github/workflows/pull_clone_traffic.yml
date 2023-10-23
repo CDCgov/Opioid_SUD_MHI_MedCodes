@@ -1,8 +1,9 @@
 name: Clone Traffic Tracker
 
 on:
+  workflow_dispatch:  # Manual triggering
   schedule:
-    - cron: "0 0 * * 1"  # Run every 2 weeks, adjust the schedule as needed
+    - cron: "0 0 * * 1"  # Automated schedule (every 2 weeks on Monday)
 
 jobs:
   track-clone-traffic:
