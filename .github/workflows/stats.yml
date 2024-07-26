@@ -1,0 +1,32 @@
+name: Github Repo Statistics
+
+on:
+  schedule:
+    # Run this once per day, towards the end of the day for keeping the most
+    # recent data point most meaningful (hours are interpreted in UTC).
+    - cron: "0 23 * * *"
+  workflow_dispatch: # Allow for running this manually.
+
+jobs:
+  repostats:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-app-ocio-github-repo-statistics
+    steps:
+
+      - name: Get Github App token
+        if: github.ref == 'refs/heads/main'
+        id: generate_token
+        run: |
+          echo "${{ secrets.PRIVATE_KEY }}" > private.pem
+          result=$(npx github-app-installation-token \
+            --appId ${{ vars.APP_ID }} \
+            --installationId ${{ vars.INSTALLATION_ID }} \
+            --privateKeyLocation private.pem)
+          echo "TOKEN=$result" >> "$GITHUB_OUTPUT"
+
+      - name: run github repository stats
+        uses: jgehrcke/github-repo-stats@v1.4.2
+        with:
+          ghtoken: ${{ steps.generate_token.outputs.TOKEN }}
+          ghpagesprefix: https://cdcgov.github.io/
