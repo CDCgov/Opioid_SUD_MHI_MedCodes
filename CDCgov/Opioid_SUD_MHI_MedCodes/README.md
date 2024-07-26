@@ -7,4 +7,4 @@
 **Latest report PDF**: [report.pdf](https://github.com/CDCgov/Opioid_SUD_MHI_MedCodes/raw/github-repo-stats/CDCgov/Opioid_SUD_MHI_MedCodes/latest-report/report.pdf)
 
 
-**Latest report HTML via GitHub pages**: [report.html](https://cdcgov.github.io//CDCgov/Opioid_SUD_MHI_MedCodes/latest-report/report.html)
+**Latest report HTML via GitHub pages**: [report.html](https://cdcgov.github.io/CDCgov/Opioid_SUD_MHI_MedCodes/latest-report/report.html)
