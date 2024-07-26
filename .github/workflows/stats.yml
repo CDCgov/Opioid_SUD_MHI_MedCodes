@@ -29,4 +29,4 @@ jobs:
         uses: jgehrcke/github-repo-stats@v1.4.2
         with:
           ghtoken: ${{ steps.generate_token.outputs.TOKEN }}
-          ghpagesprefix: https://cdcgov.github.io/
+          ghpagesprefix: https://cdcgov.github.io
