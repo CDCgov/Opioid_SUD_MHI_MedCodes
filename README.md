@@ -10,7 +10,7 @@ For more information on methodology and development, please see the methodology 
 
 https://www.cdc.gov/nchs/data/series/sr_02/sr2-188.pdf
 
-This repository contains mappings for child categories under the parent categories Opioid Involvement, Substance Use Disorder, and Mental Health Issues. It also contains a sample input data file. It should be possible to run this code on the sample data file, using the included sample config file as-is. To calculate the final counts for the parent categories, after running the code, these parent categories can be created by counting all observations where any value in the child category (e.g., SUD_NICOTINE) creates a positive flag in the parent category (e.g., SUD). For more information, see the data dictionary and description her:
+This repository contains mappings for child categories under the parent categories Opioid Involvement, Substance Use Disorder, and Mental Health Issues. It also contains a sample input data file. It should be possible to run this code on the sample data file, using the included sample config file as-is. To calculate the final counts for the parent categories, after running the code, these parent categories can be created by counting all observations where any value in the child category (e.g., SUD_NICOTINE) creates a positive flag in the parent category (e.g., SUD). For more information, see the data dictionary and description here:
 
 FY18: https://www.cdc.gov/nchs/data/nhcs/Task-3-Doc-508.pdf
 
