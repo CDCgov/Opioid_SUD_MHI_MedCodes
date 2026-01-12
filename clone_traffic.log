@@ -540,3 +540,8 @@ Mon Jan  5 01:47:11 UTC 2026: Clone Traffic Data: {
   "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-repository-clones",
   "status": "403"
 }
+Mon Jan 12 01:43:53 UTC 2026: Clone Traffic Data: {
+  "message": "Resource not accessible by integration",
+  "documentation_url": "https://docs.github.com/rest/metrics/traffic#get-repository-clones",
+  "status": "403"
+}
